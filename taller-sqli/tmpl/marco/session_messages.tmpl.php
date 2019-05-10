@@ -1,0 +1,31 @@
+<div id="mensajeFormulario">
+    <?php if (Session::get_instance()->has_messages()): ?>
+        <?php $template_mensajes = Session::get_instance()->get_messages(); ?>
+        <?php if (isset($template_mensajes) && count($template_mensajes) > 0): ?>
+            <?php
+            $template_correspondencias_tipos_mensaje = array(
+                Session::TYPE_SUCCESS_MESSAGE => 'success',
+                Session::TYPE_INFORMATION_MESSAGE => 'info',
+                Session::TYPE_WARNING_MESSAGE => 'warning',
+                Session::TYPE_ERROR_MESSAGE => 'danger'
+            );
+            ?>
+            <?php foreach ($template_mensajes as $tipo_mensaje => $mensajes_por_tipo): ?>
+                <?php if (count($mensajes_por_tipo) > 0): ?>
+                    <?php $template_clase_estilo_mensaje = $template_correspondencias_tipos_mensaje[$tipo_mensaje]; ?>
+                    <div class="alert alert-<?php echo $template_clase_estilo_mensaje; ?>" role="alert">
+                        <?php if (count($mensajes_por_tipo) > 1): ?>
+                            <ul>
+                                <?php foreach ($mensajes_por_tipo as $template_mensaje): ?>
+                                    <li><?php echo $template_mensaje; ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php else: ?>
+                            <?php echo $mensajes_por_tipo[0]; ?>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    <?php endif; ?>
+</div>

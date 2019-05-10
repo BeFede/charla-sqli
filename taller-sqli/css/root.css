@@ -1,0 +1,20 @@
+/*
+--Archivo raíz CSS, define las variables que cambian según la empresa
+--Backgrounds
+--Esquema de colores
+--Logos
+*/
+:root {
+    --color: #38B1AB;
+    --def-color: #38B1AB;
+    --darker-color: #38B1AB;
+    --translucid-color: #38B1ABcc;
+    --very-translucid-color: #38B1AB77;
+    --logo-index: url('../res/logo-systems.jpg');
+    --logo-sidebar: url('../res/utn_sidebar.png');
+    --logo-footer: url("../res/ss_sq.png");
+     --bg-sidebar: url("../res/utn_sidebar.png");
+    --bg-index: url("../res/softSolutions.png");
+    --bg-login: url("../res/bg_login.jpg");
+    --gradient: linear-gradient(to bottom right,var(--color), var(--darker-color));
+  }
