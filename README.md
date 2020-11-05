@@ -4,9 +4,6 @@
 - Laboratorio en PHP
 - Script de explotación SQL injection ciego
 
-La charla fue llevada a cabo el Martes 7 de Mayo de 2019 en la 
-Universidad Tecnológica Nacional Facultad Regional Córdoba
-
 
 ## Diapositivas
 En diapositivas/presentacion.pdf
@@ -24,6 +21,4 @@ En diapositivas/presentacion.pdf
 - Al ejecutarlo con python3, seguir las instrucciones para explotar la vulnerabilidad
 
 
-_Próximamente las instrucciones y comandos para explotar las distintas vulnerabilidades dentro del taller_
-
-
+_Todo lo presentado aqui es con fines académicos y educativos. Queda prohibido cualquier otro uso
